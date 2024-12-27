@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Casey Graphics Design - Custom Logo and Graphic Design Services">
+  <title>Casey Graphics Design</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #3a1111;
+    }
+
+    header {
+      background: linear-gradient(to right, #943b3b, #5b05fa, #943b3b);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header img {
+      max-width: 120px;
+      margin-bottom: 15px;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #3a1111;
+    }
+
+    section p {
+      font-size: 18px;
+      color: #3f2c5e;
+    }
+
+    .gallery-container {
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .gallery-track {
+      display: inline-flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .gallery-track img {
+      width: 300px;
+      height: 200px;
+      margin: 5px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 15px;
+      }
+
+      header img {
+        max-width: 100px;
+      }
+
+      section p {
+        font-size: 16px;
+      }
+
+      .gallery-track img {
+        width: 200px;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section p {
+        font-size: 14px;
+      }
+
+      .nav-button {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./CGD-Photoroom-removebg-preview.png" alt="Casey Graphics Design Logo"> <!-- Replace with your logo -->
+    <h1>Casey Graphics Design</h1>
+    <p><b>Turning Ideas into Visual Masterpieces!</b></p>
+  </header>
+
+  <section>
+    <h2>Welcome to Casey Graphics Design</h2>
+    <p>We specialize in crafting unique and custom designs, including logos, flyers, artwork, cartoon portraits, album
+      covers, and more. Each creation is tailored to reflect your style and leave a lasting impression.</p>
+    <p>Contact us today for a consultation and let's bring your vision to life!</p>
+
+    <!-- Gallery Section for Graphics Designs -->
+    <h3>Our Latest Designs</h3>
+    <div class="gallery-container">
+      <div class="gallery-track" id="galleryTrack">
+        <!-- Replace these images with your own -->
+       <a href="./1.jpg"><img src="1.jpg" alt="Design 1"></a> 
+        <a href="./2.jpg"><img src="2.jpg" alt="Design 2"></a>
+        <a href="./3.jpg"><img src="3.jpg" alt="Design 3"></a>
+        <a href="./4.jpg"><img src="4.jpg" alt="Design 4"></a>
+        <a href="./5.jpg"><img src="5.jpg" alt="Design 5"></a>
+        <a href="./6.jpg"><img src="6.jpg" alt="Design 6"></a>
+        <a href="./7.jpg"><img src="7.jpg" alt="Design 7"></a>
+        <a href="./8.jpg"><img src="8.jpg" alt="Design 8"></a>
+        <a href="./9.jpg"><img src="9.jpg" alt="Design 9"></a>
+        <a href="./10.jpg"><img src="10.jpg" alt="Design 10"></a>
+        <a href="./11.jpg"><img src="11.jpg" alt="Design 11"></a>
+        <a href="./12.jpg"><img src="12.jpg" alt="Design 12"></a>
+        <a href="./13.jpg"><img src="13.jpg" alt="Design 13"></a>
+        <a href="./14.jpg"><img src="14.jpg" alt="Design 14"></a>
+        <a href="./15jpg"><img src="15.jpg" alt="Design 15"></a>
+        <a href="./16.jpg"><img src="16.jpg" alt="Design 16"></a>
+        <a href="./17.jpg"><img src="17.jpg" alt="Design 17"></a>
+        <a href="./18.jpg"><img src="18.jpg" alt="Design 18"></a>
+        <a href="./19.jpg"><img src="19.jpg" alt="Design 19"></a>
+        <a href="./20.jpg"><img src="20.jpg" alt="Design 20"></a>
+      </div>
+      <button class="nav-button prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="nav-button next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <!-- Instagram Link Section -->
+    <div class="social-links">
+      <h3>Follow us on Instagram</h3>
+      <a href="https://www.instagram.com/casey_graphics_design?igsh=dmg2ZmhmOG11MnVh" target="_blank">Visit our
+        Instagram</a>
+    </div>
+
+    <!-- Optional Pricing Section -->
+    <div class="pricing-section">
+      <h3>Artwork Pricing</h3>
+      <p>Prices vary depending on the complexity and type of design. Contact us for a custom quote designs!</p>
+      <p>Starting at $35 for basic design.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Casey Graphics Design | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const track = document.getElementById('galleryTrack');
+    const images = track.children;
+    const totalImages = images.length;
+    let position = 0;
+
+    function moveSlide(direction) {
+  const containerWidth = document.querySelector('.gallery-container').offsetWidth;
+  const maxPosition = -(totalImages * images[0].offsetWidth - containerWidth);
+
+  // Reverse the direction multiplier logic
+  position -= direction * images[0].offsetWidth;
+
+  // If moving left past the first image, wrap to the last image
+  if (position > 0 && direction < 0) {
+    position = maxPosition;
+  }
+  // If moving right past the last image, wrap to the first image
+  else if (position < maxPosition && direction > 0) {
+    position = 0;
+  }
+
+  track.style.transform = `translateX(${position}px)`;
+}
+
+  </script>
+</body>
+
+</html>
